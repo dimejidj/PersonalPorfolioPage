@@ -7,6 +7,7 @@
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
+  font-family: monospace;
 }
 
 * {
@@ -26,23 +27,23 @@ html {
   border-bottom: var(--color-lightblue) solid;
 }
 
-#navbar li{
+#navbar li {
   display: inline-block;
   margin: 30px 25px 15px 15px;
   font-size: 20px;
   font-weight: 600;
-  color: lightblue;
-}
-
-#navbar a{
-   color: #000066;
-  cursor: pointer;
-}
-
-#navbar a:hover {
   color: var(--color-lightblue);
 }
 
+#navbar a {
+  color: black;
+  cursor: pointer;
+  font-family: monospace;
+}
+
+#navbar a:hover {
+  color: var(--color-pinky);
+}
 
 #toppage {
   height: 100vh;
@@ -53,34 +54,49 @@ html {
   width: 100%;
   height: 100vh;
   text-align: center;
-  background-color: #000066;
+  background-color: black;
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 40px
+    ),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 30px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
 #welcome-section h1 {
   padding-top: 40vh;
   font-size: 60px;
-  color: lightblue;
+  color: var(--color-lightblue);
 }
 
 #welcome-section h3 {
   padding-top: 7px;
   font-size: 30px;
-  color:  #cf045e;
+  color: #cf045e;
   font-style: italic;
 }
 
-
+#welcome-section h2 {
+  padding-top: 7px;
+  font-size: 15px;
+  color: #cf045e;
+  font-style: italic;
+}
 
 #projects {
   background-color: var(--color-lightblue);
-
   height: auto;
-}
-
-
-
-.project-tile {
-  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 #projects h3 {
@@ -95,16 +111,18 @@ html {
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 15px;
-  padding: 50px 0px 50px 90px;
+  padding: 50px 0px 50px 20px;
   max-width: 1240px;
 }
 
-
 #work {
+  flex-direction: row;
   display: flex;
-  width: 100%;
+  max-width: 1000px;
   flex-wrap: wrap;
-  margin-left: 20px;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .project-tile p {
@@ -121,9 +139,10 @@ html {
   width: 400px;
   height: 330px;
   object-fit: cover;
+  border-radius: 5px;
 }
 
-.project-tile:hover p{
+.project-tile:hover p {
   background-color: var(--color-grey);
   box-shadow: 2px 4px 10px black;
 }
@@ -132,11 +151,41 @@ a {
   cursor: pointer;
 }
 
+.otherbtn {
+  width: 120px;
+  height: 40px;
+  border-radius: 7px;
+  margin-bottom: 45px;
+  background-color: black;
+  padding: 10px;
+  color: var(--color-lightblue);
+}
+
+.otherbtn:hover {
+  background-color: var(--color-grey);
+  box-shadow: 2px 4px 10px black;
+  cursor: pointer;
+}
+
 #contact {
   width: 100%;
   height: 700px;
   text-align: center;
-  background-color: #000066;
+  background-color: black;
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 40px
+    ),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 30px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
 }
 
 #details {
@@ -150,7 +199,7 @@ a {
 
 #details p {
   font-size: 25px;
-  color:  #cf045e;
+  color: #cf045e;
   font-weight: 600;
 }
 
@@ -196,11 +245,43 @@ a {
 
 @media (max-width: 500px) {
   #work {
-  position: relative;
-  height: auto;
-  min-height: 100%; 
-}
-  #details{
+    position: relative;
+    height: auto;
+    min-height: 100%;
+  }
+  #details {
     padding-top: -100px;
   }
+}
+
+#top_other_pg {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  background-image: radial-gradient(
+      white,
+      rgba(255, 255, 255, 0.2) 2px,
+      transparent 40px
+    ),
+    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px),
+    radial-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 30px
+    );
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+.home_icon {
+  font-size: 40px;
+  color: var(--color-pinky);
+}
+
+.home_icon:hover {
+  font-size: 42px;
+  color: lightblue;
 }
